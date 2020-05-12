@@ -11,22 +11,21 @@ import org.springframework.stereotype.Service;
     @Service
     public class PolicyHandler{
 
-        @Autowired CustomerRepository CustomerRepository;
-
         @StreamListener(KafkaProcessor.INPUT)
-        public void wheneverReserved_Orderresult(@Payload Reserved reserved){
+        public void wheneverReserved_Orderresultalarm(@Payload Reserved reserved){
 
             if(reserved.isMe()){
                 System.out.println("##### 예약 완료 되었습니다  #####" );//+ reserved.toJson());
-                System.out.println("======================");
-                System.out.println("고객 정보 수정/등록");
-                Customer c = new Customer();
-                c.setBookid(reserved.getBookid());
-                c.setOrderid(reserved.getId());
-                c.setStatus(reserved.getStatus());
-                c.setUserid(reserved.getUserid());
-                CustomerRepository.save(c);
-                System.out.println("======================");
+
+            }
+
+        }
+
+        public void wheneverCanceled_Orderresultalarm(@Payload Canceled canceled){
+
+            if(canceled.isMe()){
+                System.out.println("##### 예약 취소 되었습니다  #####" );//+ reserved.toJson());
+
             }
 
         }
