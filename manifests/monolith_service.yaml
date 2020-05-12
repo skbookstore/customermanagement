@@ -7,6 +7,6 @@ metadata:
 spec:
   ports:
     - port: 8083
-      targetPort: 8083
+      targetPort: 8080
   selector:
     app: customer
