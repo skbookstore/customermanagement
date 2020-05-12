@@ -1,4 +1,5 @@
 bookrental\PolicyHandler.class
+bookrental\Canceled.class
 bookrental\AbstractEvent$1.class
 bookrental\Customer.class
 bookrental\CustomerRepository.class

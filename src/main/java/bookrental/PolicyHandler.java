@@ -21,6 +21,7 @@ import org.springframework.stereotype.Service;
 
         }
 
+        @StreamListener(KafkaProcessor.INPUT)
         public void wheneverCanceled_Orderresultalarm(@Payload Canceled canceled){
 
             if(canceled.isMe()){
