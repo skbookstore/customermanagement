@@ -1,0 +1,10 @@
+bookrental\PolicyHandler.class
+bookrental\AbstractEvent$1.class
+bookrental\Customer.class
+bookrental\CustomerRepository.class
+bookrental\Reserved.class
+bookrental\AbstractEvent.class
+bookrental\Statusalarm.class
+bookrental\CustomerController.class
+bookrental\Application.class
+bookrental\config\kafka\KafkaProcessor.class
